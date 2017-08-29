@@ -123,4 +123,7 @@
               	<target name="Test1">
               	    <echo message="Compiling source code"/>
               	</target>
+              	<test name="test.com.arnab.Test1" haltonfailure="no" todir="${REPORT}/xml" outfile="TEST-result">
+              	<formatter type="xml" />
+              	</test>
 </project>
