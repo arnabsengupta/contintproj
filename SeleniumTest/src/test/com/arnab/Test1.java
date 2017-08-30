@@ -32,7 +32,7 @@ public String SEL_PROP = "selenium.properties";
 	}
 	@Test
 	public void test(){
-		
+		driver.manage().window().maximize();
 		driver.get("http://www.calculator.net/");
 		driver.findElement(By.partialLinkText("Mortgage Calculator")).click();
 		driver.findElement(By.cssSelector("input[type=\"image\"]:nth-child(2)")).click();
