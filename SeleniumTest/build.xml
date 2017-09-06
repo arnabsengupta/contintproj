@@ -27,6 +27,7 @@
         <pathelement location="../../.ivy2/cache/org.hamcrest/hamcrest-all/jars/hamcrest-all-1.3.jar"/>
         <pathelement location="../../.ivy2/cache/junit/junit/jars/junit-4.11.jar"/>
         <pathelement location="../../.ivy2/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3.jar"/>
+    	<pathelement location="../../.ivy2/cache/ant-contrib/ant-contrib/jars/ant-contrib-1.0b3.jar"/>
     </path>
     <path id="JUnit 4.libraryclasspath">
         <pathelement location="../../Documents/eclipse/plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
@@ -42,11 +43,7 @@
               	<property name="pdf.report.home" value="junit/pdfReport" />
 
               	<target name="testreport-pdf" depends="junitreport">
-              	<junitpdfreport todir="." styledir="${pdf.report.home}/structural">
-              	<fileset dir="${junit.output.dir}">
-              	<include name="TEST-*.xml"/>
-              	</fileset>
-              	</junitpdfreport>
+             
         	</target>
     <target name="init">
         <mkdir dir="bin"/>
@@ -83,6 +80,8 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+
+    	
     <target name="Test1">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
