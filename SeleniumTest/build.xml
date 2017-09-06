@@ -3,7 +3,7 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="testreport-pdf" name="SeleniumTest">
+              as the first entry and export the buildfile again. --><project basedir="." default="junitreport" name="SeleniumTest">
     <property environment="env"/>
     <property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
@@ -40,11 +40,6 @@
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
 
-              	<property name="pdf.report.home" value="junit/pdfReport" />
-
-              	<target name="testreport-pdf" depends="junitreport">
-             
-        	</target>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
