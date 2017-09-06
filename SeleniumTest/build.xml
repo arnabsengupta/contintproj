@@ -41,7 +41,7 @@
 
               	<property name="pdf.report.home" value="junit/pdfReport" />
 
-     	<target name="testreport-pdf" depends="junitreport">
+              	<target name="testreport-pdf" depends="junitreport">
               	<junitpdfreport todir="." styledir="${pdf.report.home}/structural">
               	<fileset dir="${junit.output.dir}">
               	<include name="TEST-*.xml"/>
@@ -88,6 +88,7 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="test.com.arnab.Test1" todir="${junit.output.dir}"/>
+        	<test name="test.com.arnab.Test2" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
             <classpath refid="SeleniumTest.classpath"/>
         </junit>
