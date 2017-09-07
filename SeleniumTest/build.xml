@@ -83,6 +83,7 @@
             <formatter type="xml"/>
             <test name="test.com.arnab.Test1" todir="${junit.output.dir}"/>
         	<test name="test.com.arnab.Test2" todir="${junit.output.dir}"/>
+        	<test name="test.com.arnab.Test3" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
             <classpath refid="SeleniumTest.classpath"/>
         </junit>
