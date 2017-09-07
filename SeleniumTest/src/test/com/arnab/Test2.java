@@ -35,11 +35,12 @@ public String SEL_PROP = "selenium.properties";
 		//System.setProperty("webdriver.chrome.driver", "/home/tamajit/Downloads/chromedriver");
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\IBM_ADMIN\\mavenworkspace\\SeleniumTest\\chromedriver.exe");
 		//driver = new ChromeDriver();
-		DesiredCapabilities capability = DesiredCapabilities.chrome();
+		//DesiredCapabilities capability = DesiredCapabilities.chrome();
 		//capability.setCapability(ChromeOptions.CAPABILITY, 0);
 	
 		try {
-			driver = new RemoteWebDriver(new URL("http://9.184.214.122:5558/wd/hub"), DesiredCapabilities.chrome());
+			//driver = new RemoteWebDriver(new URL("http://9.184.214.122:5558/wd/hub"), DesiredCapabilities.chrome());
+			driver = new RemoteWebDriver(new URL("http://9.184.214.122:5558/wd/hub"), DesiredCapabilities.firefox());
 			//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capability);
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
