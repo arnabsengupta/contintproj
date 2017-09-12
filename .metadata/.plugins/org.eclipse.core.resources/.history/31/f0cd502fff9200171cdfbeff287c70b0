@@ -1,0 +1,15 @@
+package test.com.arnab;
+
+import org.junit.Before;
+
+import test.com.arnab.SeleniumTest.BaseTest;
+
+public class Test3 extends BaseTest{
+	
+	
+	@Before
+	public void setUp(){
+		driver = new firefoxdriver
+	}
+
+}

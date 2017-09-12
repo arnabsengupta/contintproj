@@ -1,0 +1,49 @@
+package test.com.arnab;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import test.com.arnab.SeleniumTest.BaseTest;
+
+public class Test3 extends BaseTest{
+	
+
+	@Before
+	public void setUp(){
+	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\IBM_ADMIN\\mavenworkspace\\SeleniumTest\\chromedriver.exe");
+	//driver = new ChromeDriver();
+	DesiredCapabilities capability = DesiredCapabilities.firefox();
+	//capability.setCapability(ChromeOptions.CAPABILITY, 0);
+
+	try {
+		driver = new RemoteWebDriver(new URL("http://9.184.214.122:5558/wd/hub"), DesiredCapabilities.chrome());
+		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capability);
+	} catch (MalformedURLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+
+	@Test
+	public void test(){
+		driver.manage().window().maximize();
+		driver.get("http://www.calculator.net/");
+		driver.findElement(By.partialLinkText("Mortgage Calculator")).click();
+		driver.findElement(By.cssSelector("input[type=\"image\"]:nth-child(2)")).click();
+		
+		
+	}
+	
+	@After
+	public void quit(){
+		driver.quit();
+	}
+}

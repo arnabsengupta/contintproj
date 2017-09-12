@@ -1,0 +1,34 @@
+package test.com.arnab;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import test.com.arnab.SeleniumTest.BaseTest;
+
+public class Test3 extends BaseTest{
+	
+	
+	@Before
+	public void setUp(){
+		driver = new FirefoxDriver();
+		
+	}
+
+	@Test
+	public void test(){
+		driver.manage().window().maximize();
+		driver.get("http://www.calculator.net/");
+		driver.findElement(By.partialLinkText("Mortgage Calculator")).click();
+		driver.findElement(By.cssSelector("input[type=\"image\"]:nth-child(2)")).click();
+		
+		
+	}
+	
+	@After
+	public void quit(){
+		driver.quit();
+	}
+}
