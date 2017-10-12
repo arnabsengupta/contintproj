@@ -25,7 +25,7 @@ public class Test3 extends BaseTest{
 	//capability.setCapability(ChromeOptions.CAPABILITY, 0);
 
 	try {
-		driver = new RemoteWebDriver(new URL("http://9.184.214.122:5558/wd/hub"), DesiredCapabilities.firefox());
+		driver = new RemoteWebDriver(new URL("http://9.120.20.56:5558/wd/hub"), DesiredCapabilities.firefox());
 		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capability);
 	} catch (MalformedURLException e) {
 		// TODO Auto-generated catch block
