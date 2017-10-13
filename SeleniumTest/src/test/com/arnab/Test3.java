@@ -18,7 +18,8 @@ public class Test3 extends BaseTest{
 
 	@Before
 	public void setUp(){
-	System.setProperty("webdriver.firefox.driver", "/home/tamajit/firefox/firefox");
+	//System.setProperty("webdriver.firefox.driver", "/home/tamajit/firefox/firefox");
+	System.setProperty("webdriver.chrome.driver", "/home/tamajit/Downloads/chromedriver");
 		//System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 //	driver = new FirefoxDriver();
 	//DesiredCapabilities capability = DesiredCapabilities.firefox();

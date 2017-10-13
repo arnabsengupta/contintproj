@@ -31,8 +31,8 @@ public String SEL_PROP = "selenium.properties";
 	
 	@Before
 	public void setUp(){
-		System.setProperty("webdriver.firefox.driver", "/home/tamajit/firefox/firefox");
-		//System.setProperty("webdriver.chrome.driver", "/home/tamajit/Downloads/chromedriver");
+		//System.setProperty("webdriver.firefox.driver", "/home/tamajit/firefox/firefox");
+		System.setProperty("webdriver.chrome.driver", "/home/tamajit/Downloads/chromedriver");
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\IBM_ADMIN\\mavenworkspace\\SeleniumTest\\chromedriver.exe");
 		//driver = new ChromeDriver();
 		//DesiredCapabilities capability = DesiredCapabilities.chrome();
